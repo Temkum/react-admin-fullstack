@@ -3,7 +3,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { themeSettings } from './theme';
 import { useSelector } from 'react-redux';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import Layout from './scenes/layout';
 import Dashboard from './scenes/dashboard';
 
@@ -19,10 +19,10 @@ function App() {
             <CssBaseline />
             <Routes>
               <Route path="/" element={<Layout />}>
-                {/* <Route
+                <Route
                   path="/"
                   element={<Navigate to="/dashboard" replace />}
-                /> */}
+                />
                 <Route path="/dashboard" element={<Dashboard />} />
               </Route>
             </Routes>
