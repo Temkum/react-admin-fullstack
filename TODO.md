@@ -23,3 +23,11 @@ Overall using MERN stack
 Download nodejs and preferred code IDE for development.
 
 - create a server folder and run this command in it `npm i express body-parser cors dotenv helmet morgan mongoose nodemon`
+
+## Client
+- run `npm create vite@latest` to setup react
+- install dev dependencies `npm i react-redux @reduxjs/toolkit react-datepicker react-router-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid @nivo/core @nivo/bar @nivo/geo @nivo/pie`
+
+> if you have conflicts with react-datepicker, run `npm i react-datepicker@4.8.0`
+
+1.40
