@@ -30,4 +30,4 @@ Download nodejs and preferred code IDE for development.
 
 > if you have conflicts with react-datepicker, run `npm i react-datepicker@4.8.0`
 
-1.40
+2.06
