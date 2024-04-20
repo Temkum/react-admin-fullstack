@@ -24,7 +24,6 @@ const Customers = () => {
     { field: 'occupation', headerName: 'Occupation', flex: 1 },
     { field: 'role', headerName: 'Role', flex: 0.5 },
   ];
-  console.log(data);
 
   return (
     <Box m="1.rem 2.5rem" padding={'1rem'}>
