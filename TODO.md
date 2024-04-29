@@ -30,4 +30,7 @@ Download nodejs and preferred code IDE for development.
 
 > if you have conflicts with react-datepicker, run `npm i react-datepicker@4.8.0`
 
+## geography section
+- install package `npm i country-iso-2-to-3`
+
 4.03

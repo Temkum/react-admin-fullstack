@@ -13,6 +13,12 @@ const Transactions = () => {
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState('');
   const [searchInput, setSearchInput] = useState('');
+  const { data, isLoading } = useGetTransactionsQuery({
+    page,
+    pageSize,
+    sort: JSON.stringify(sort),
+    search,
+  });
 
   const columns = [
     { field: '_id', headerName: 'ID', flex: 1 },
@@ -33,20 +39,14 @@ const Transactions = () => {
     },
   ];
 
-  const { data, isLoading } = useGetTransactionsQuery({
-    page,
-    pageSize,
-    sort: JSON.stringify(sort),
-    search,
-  });
-
   return (
     <Box padding="1rem">
-      <Header title={'Transactions'} subtitle={'Entire list of Transactions'} />
+      <Header title={'TRANSACTIONS'} subtitle={'Entire list of Transactions'} />
       <Box
+        height={'80vh'}
         sx={{
           '& .MuiDataGrid-root': { border: 'none' },
-          '$.MuiDataGrid-cell': { borderBottom: 'none' },
+          '$ .MuiDataGrid-cell': { borderBottom: 'none' },
           '& .MuiDataGrid-columnHeaders': {
             backgroundColor: theme.palette.background.alt,
             color: theme.palette.secondary[100],
@@ -78,7 +78,7 @@ const Transactions = () => {
           paginationMode="server"
           sortingMode="server"
           onPaginationModelChange={(newPage) => setPage(newPage)}
-          // onPageSizeChange={(newPageSize) => setPageSize(pageSize)}
+          onPageSizeChange={(newPageSize) => setPageSize(pageSize)}
           onSortModelChange={(newSortModel) => setSort(...newSortModel)}
           components={{ Toolbar: DataGridCustomToolbar }}
           componentProps={{
